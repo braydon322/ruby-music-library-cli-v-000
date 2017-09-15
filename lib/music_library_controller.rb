@@ -102,10 +102,10 @@ class MusicLibraryController
     song_choice = gets.chomp.to_i
 
     binding.pry
-    
+
     Song.all.sort_by(&:name)
 
-    song = Song.all[song_choice - 1]
+    song = Song.all[song_choice]
 
     if song != nil && (song_choice < Song.all.length && song_choice > 1)
       puts "Playing #{song.name} by #{song.artist.name}"
