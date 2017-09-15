@@ -101,8 +101,6 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     song_choice = gets.chomp.to_i
 
-    binding.pry
-
     Song.all.sort_by(&:name)
 
     song = Song.all[song_choice]
