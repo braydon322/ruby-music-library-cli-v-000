@@ -101,10 +101,10 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     song_choice = gets.chomp.to_i - 4
 
-    Song.all.sort_by(&:name)
+    sorted_array = Song.all.sort_by(&:name)
 
 
-    song = Song.all[song_choice]
+    song = sorted_array[song_choice]
     binding.pry
     puts "#{song.name} - #{song.artist.name}"
 
