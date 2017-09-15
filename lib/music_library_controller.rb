@@ -104,7 +104,7 @@ class MusicLibraryController
     Song.all.sort_by(&:name)
 
     song = Song.all[song_choice]
-
+    binding.pry
     puts "#{song.name} - #{song.artist.name}"
 
     if song != nil && (song_choice < Song.all.length && song_choice > 1)
