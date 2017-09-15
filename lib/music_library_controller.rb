@@ -99,7 +99,7 @@ class MusicLibraryController
 
   def play_song
     puts "Which song number would you like to play?"
-    song_choice = gets.chomp.to_i
+    song_choice = gets.chomp.to_i - 1
 
     sorted_array = Song.all.sort_by(&:name)
 
