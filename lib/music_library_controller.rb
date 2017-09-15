@@ -105,6 +105,8 @@ class MusicLibraryController
 
     song = Song.all[song_choice]
 
+    puts "#{song.name} - #{song.artist.name}"
+
     if song != nil && (song_choice < Song.all.length && song_choice > 1)
       puts "Playing #{song.name} by #{song.artist.name}"
     end
